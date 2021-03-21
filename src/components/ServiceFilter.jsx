@@ -1,6 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import {changeServiceFilter, resetFilter} from "../actions/actionCreators";
 import React from "react";
+import {Form} from "react-bootstrap";
 
 export default function ServiceFilter() {
     const filter = useSelector(state => state.serviceFilter);
@@ -16,10 +17,10 @@ export default function ServiceFilter() {
     }
 
     return (
-        <form>
-            <label htmlFor={filter}>Filter:</label>
-            <input name="filter" onChange={handleChange} value={filter}/>
-            <button type='submit' onClick={handleClear}>Clear</button>
-        </form>
+        <Form inline>
+            <Form.Label>Фильтр:</Form.Label>
+            <Form.Control type="text" name="filter" onChange={handleChange} value={filter}/>
+            <button className="btn btn-info" type='submit' onClick={handleClear}>Clear</button>
+        </Form>
     )
 }

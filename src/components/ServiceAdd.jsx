@@ -51,7 +51,7 @@ export default function ServiceAdd() {
             </Form.Group>
             <Button variant="primary" type="submit" disabled={loading}>{loading ?
                 <Spinner animation="border" size="sm"/> : 'Save'}</Button>
-            {item.id !== 0 && <button className="btn btn-info" onClick={handleCancel}>Cancel</button>}
+            <button className="btn btn-outline-primary" onClick={handleCancel}>Cancel</button>
             {error && `Error: ${error}`}
         </Form>
     )
