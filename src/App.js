@@ -10,7 +10,7 @@ function App() {
     return (
         <Router>
             <div>
-                <Route path="/">
+                <Route path="/" exact>
                     <Redirect to="/services/"/>
                 </Route>
                 <Route path="/services/" exact>
