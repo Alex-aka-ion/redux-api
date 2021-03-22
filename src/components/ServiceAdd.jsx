@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {addService, addServiceSuccess, changeServiceField, fetchItem, fetchServices} from "../actions/actionCreators";
+import {addService, addServiceSuccess, changeServiceField, fetchItem} from "../actions/actionCreators";
 import {Button, Form, Spinner} from "react-bootstrap";
 import {useHistory, useParams} from 'react-router-dom';
 
@@ -9,8 +9,6 @@ export default function ServiceAdd() {
     const dispatch = useDispatch();
     const history = useHistory();
     const {id} = useParams();
-
-    console.log(id);
 
     useEffect(() => {
         if (id) {

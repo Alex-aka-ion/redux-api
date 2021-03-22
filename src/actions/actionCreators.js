@@ -2,8 +2,7 @@ import {
     ADD_SERVICE_FAILURE, ADD_SERVICE_REQUEST, ADD_SERVICE_SUCCESS, CHANGE_FILTER,
     CHANGE_SERVICE_FIELD,
     EDIT_SERVICE, FETCH_SERVICES_FAILURE, FETCH_SERVICES_REQUEST, FETCH_SERVICES_SUCCESS,
-    REMOVE_SERVICE, REMOVE_SERVICE_FAILURE, REMOVE_SERVICE_REQUEST, REMOVE_SERVICE_SUCCESS,
-    RESET_FIELDS, RESET_FILTER,
+    REMOVE_SERVICE, RESET_FILTER,
 } from "./actionTypes";
 
 export function fetchServicesRequest() {
@@ -33,18 +32,6 @@ export function addServiceSuccess() {
 export function removeService(id) {
     return {type: REMOVE_SERVICE, payload: {id}};
 }
-
-/*export function removeServiceRequest(id) {
-    return {type: REMOVE_SERVICE_REQUEST, payload: {id}};
-}
-
-export function removeServiceFailure(message) {
-    return {type: REMOVE_SERVICE_FAILURE, payload: {message}}
-}
-
-export function removeServiceSuccess() {
-    return {type: REMOVE_SERVICE_SUCCESS}
-}*/
 
 export function changeServiceField(name, value) {
     return {type: CHANGE_SERVICE_FIELD, payload: {name, value}};
@@ -78,7 +65,6 @@ export async function fetchServices(dispatch) {
 }
 
 export async function addService(dispatch, item, redirect) {
-    console.log(item);
     dispatch(addServiceRequest());
     try {
         console.log(JSON.stringify(item));

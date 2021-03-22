@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {editService, fetchServices, removeService, removeServiceOnServer, resetFields} from "../actions/actionCreators";
+import {fetchServices, removeService, removeServiceOnServer} from "../actions/actionCreators";
 import {Alert, ListGroup, Spinner} from "react-bootstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEdit, faTimes} from "@fortawesome/free-solid-svg-icons";

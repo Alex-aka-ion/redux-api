@@ -2,8 +2,7 @@ import {
     ADD_SERVICE_FAILURE,
     ADD_SERVICE_REQUEST, ADD_SERVICE_SUCCESS,
     CHANGE_SERVICE_FIELD,
-    EDIT_SERVICE,
-    RESET_FIELDS
+    EDIT_SERVICE
 } from "../actions/actionTypes";
 
 const initialState = {
